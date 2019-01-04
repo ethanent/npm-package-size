@@ -9,16 +9,6 @@
 npm i npm-package-size
 ```
 
-## How it works
-
-`npm-package-size` attempts to read metadata recursively for packages, which contains package sizes. This means that packages often don't need to be installed or even downloaded.
-
-Older package metadata doesn't contain size information, so for older packages, `npm-package-size` downloads and decompresses them, without ever saving data anywhere.
-
-Also, for increased accuracy, `npm-package-size` builds a synthetic `package-lock.json` in memory in order to better predict install size.
-
-Note that size results may differ slightly from some services as those often include extra data which may not be added to real installations. (ex. an extra `package.json` file)
-
 ## Usage
 
 ```js
@@ -37,3 +27,13 @@ await size('request')
 await size('phin', '2.1.0')
 // => {'installSize': 1081556, 'publishSize': 1081556}
 ```
+
+## How it works
+
+`npm-package-size` attempts to read metadata recursively for packages, which contains package sizes. This means that packages often don't need to be installed or even downloaded.
+
+Older package metadata doesn't contain size information, so for older packages, `npm-package-size` downloads and decompresses them, without ever saving data anywhere.
+
+Also, for increased accuracy, `npm-package-size` builds a synthetic `package-lock.json` in memory in order to better predict install size.
+
+Note that size results may differ slightly from some services as those often include extra data which may not be added to real installations. (ex. an extra `package.json` file)

@@ -1,7 +1,7 @@
 {
   "name": "npm-package-size",
-  "version": "1.0.0",
-  "description": "Calculate an NPM package's full size data, without actually installing it!",
+  "version": "1.0.1",
+  "description": "Calculate an NPM package's full size data without actually installing it!",
   "main": "index.js",
   "dependencies": {
     "centra": "^2.2.2",
@@ -30,9 +30,10 @@
   "bugs": {
     "url": "https://github.com/ethanent/npm-package-size/issues"
   },
-  "homepage": "https://github.com/ethanent/npm-package-size#readme",
+  "homepage": "https://github.com/ethanent/npm-package-size",
   "files": [
     "index.js",
-    "lib/genApproxLockfile.js"
+    "lib/genApproxLockfile.js",
+    "lib/downloadGetSize.js"
   ]
 }
